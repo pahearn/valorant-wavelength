@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wavelength Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body> 
+    <div class = "container">
+        <h1>Wavelength Game</h1>
+        
+        <p>Map: <span id="map"></span></p>
+        <p>Weapon: <span id="weapon"></span></p>
+        <p>Ultimate Ability: <span id="ult"></span></p>
+        <p>Agent: <span id="agent"></span></p>
+
+        <label for="userGuess">Your Guess (1-10): </label>
+        <input type="number" id="userGuess" min="1" max="10">
+        <button onclick="checkGuess()">Check Guess</button>
+        <p id="result"></p>
+        <p id="streak">Current Streak: 0</p>
+        <p id="maxstreak">Max Streak: 0</p>
+        <button onclick="show('popup')">How to play</button>
+        <script src="script.js"></script>
+    </div> 
+    
+    
+</body>
+<div class="popup" id="popup">
+    <h1>How to play</h1>
+    <p>The computer has picked a random number X between 1 and 10.
+        <div>Using this number X, the computer has selected four hints that are an X/10 in the category.</div>
+        <div>Your goal is to guess what the number is using the hints provided.</div>
+        <div>You will be given a Map, Weapon, Ultimate Ability, and an Agent.</div>
+        <div>For each number, there are more than one possible hints in each category.</div>
+        <div>For example, a 9 could give you a Phantom, Vandal, Odin, or Operator as the weapon.</div>
+        <div>Each hint can also correspond to more than one number.</div>
+        <div>For example, the Vandal can be an 8, 9 or 10.</div>
+        <div>This was done to increase replayability and simulate the variety in answers that you would get from playing with another person</div>
+    <a href="#" onclick="hide('popup')">Close</a>
+</div>
+</html>
